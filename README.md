@@ -81,3 +81,8 @@ $ sudo modprobe v4l2loopback video_nr=42 card_label="obs-cam" exclusive_caps=1
 
 * Press Start
 
+## Automatically load module on restart
+
+```
+echo 'options v4l2loopback video_nr=42 card_label="obs-cam" exclusive_caps=1' | sudo tee /etc/modprobe.d/v4l2-obs-studio.conf
+```
